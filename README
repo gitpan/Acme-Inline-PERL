@@ -1,0 +1,83 @@
+================================================================================
+NAME
+
+    Inline::PERL - Bring the power of PERL programming to your Perl
+    programs.
+
+
+================================================================================
+SYNOPSIS
+
+        use Inline::Files;
+        use Inline PERL;
+
+        greeting("PERL");
+
+        __PERL__
+        sub greeting {
+
+            $foo = shift @_ || $_[0];
+
+            $! = 1; # Turn buffering off
+
+            for ($i=1, $i<=10, $i++) {
+                @a[$i] = $i;
+            }
+
+            local $length = @a.length;
+
+            print "Hello, $foo\n";
+        }
+
+
+
+================================================================================
+DESCRIPTION
+
+    Inline::PERL gives you the power of the PERL programming language from
+    within your Perl programs. This gives you instant access to hundreds of
+    pre-coded applications such as bulletin boards, hit counters and
+    shopping carts.
+
+    PERL is a programming language for writing CGI applications. It's main
+    strength is that it doesn't have any unnecessary warnings or strictures.
+    It is a direct descendent of Perl, a programming language which was used
+    mainly by programmers. However, the original language required too much
+    reading and thinking and so PERL was developed as a language which was
+    more in tune with the requirements of the Internet age.
+
+    This module is not meant to be serious. If you are interested in
+    writing a genuine Inline add-in you should have a look at the Inline-API
+    documentation and the Foo.pm example that come with Inline.
+
+
+================================================================================
+INSTALLATION
+
+    This module does work and it will allow you to include PERL code in
+    your Perl program. To install this module you can follow the usual
+    procedure with the exception that you should use Makefile.PERL instead
+    of Makefile.PL.
+
+        perl Makefile.PERL # Note!!
+        make
+        make test
+        make install
+
+
+================================================================================
+AUTHOR
+
+    John McNamara jmcnamara@cpan.org
+
+    My apologies to Brian Ingerson, the Inline community and, er, the
+    PERL community.
+
+
+================================================================================
+COPYRIGHT
+
+    © MMI, John McNamara.
+
+    All Rights Reserved. This module is free software. It may be used,
+    redistributed and/or modified under the same terms as Perl itself.
